@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../styles/style5.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Royal Blade Tee</title>
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <header class="header">
+
+            <div class="header-left">
+                <a href="#menu" class="icon">
+                    <svg class="icon-svg" viewBox="0 0 24 24">
+                        <path d="M3 6h18M3 12h18M3 18h18" />
+                    </svg>
+                </a>
+            </div>
+
+            <div id="menu" class="menu-overlay">
+                <a href="#!" class="menu-close">✕</a>
+
+                <nav class="menu">
+                    <a href="../index.html">Home</a>
+                    <a href="dc_gv_tee.html">DS Forge Collection</a>
+                    <a href="../info/about_us.html">About Us</a>
+                    <a href="../info/contacts.html" target="_blank">Contacts</a>
+
+                    <div class="lang-switch" id="lang-switch">
+                        <img src="../../../img/elements/de-flag.svg" class="lang-flag">
+                        <span class="span-switch">DE</span>
+                    </div>
+
+                </nav>
+            </div>
+
+            <div class="header-center">
+                <a href="../../../index.html" class="logo-link">
+                    <img src="../../../img/elements/logo.svg" alt="DS" class="logo-img">
+                </a>
+            </div>
+
+            <div class="header-right">
+                <button class="icon">
+                    <svg class="icon-svg" viewBox="0 0 24 24">
+                        <path d="M6 8h12l-1.5 12h-9z" />
+                        <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+                    </svg>
+                </button>
+                <div class="avatar"></div>
+            </div>
+        </header>
+    </div>
+
+    <main class="product-page">
+        <div class="product-container">
+
+            <div class="product-gallery">
+                <div class="image-wrapper">
+                    <button class="arrow left" onclick="prevImage()">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <img id="product-image" src="../../../img/rbt_vb/rbt_vb-1.jpg" alt="DS Royal Blade Tee">
+                    <button class="arrow right" onclick="nextImage()">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 6l6 6-6 6" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h1 class="product-title">Royal Blade Tee – Washed Black</h1>
+
+                <div class="product-description">
+                    <!--<h2 class="desc-heading">Step into the shadow.</h2>-->
+                    <p>
+                        The Royal Blade Tee by DS STREETWEAR combines a dark streetwear aesthetic with a powerful
+                        statement design. On the front,
+                        a striking sword motif with the DS Crest stands out, framed by aggressive gothic lines and
+                        tribal elements.
+                        The back remains cleaner and more refined with the smaller crest — perfect for a strong look
+                        from every perspective.
+                    </p>
+                    <p>
+                        This shirt is made for those who don’t want to wear ordinary basics. It blends dark streetwear,
+                        knight vibes, and a confident attitude into one piece.
+                        Ideal for everyday wear, street style, gym fits, or as a standout outfit for bold looks.
+                    </p>
+                    <ul class="features-list">
+                        <li>exclusive DS STREETWEAR design</li>
+                        <li>powerful front print with sword and crest motif</li>
+                        <li>clean back print for an elegant finish</li>
+                        <li>dark, modern streetwear look</li>
+                        <li>perfect for those who want to wear style, presence, and character</li>
+                    </ul>
+                </div>
+                   <div class="post-text">
+         			 <p>
+                       <span>You can choose the size and delivery address by clicking the “Buy” button below.</span>
+          			 </p>
+        		 </div>
+            </div>
+
+        </div>
+        <div class="product-btn_container">
+            <div class="purchase-actions buy-box">
+                <div class="buy-options">
+                    <button id="payment-request-button" class="btn-buy stripe"
+                        onclick="window.location.href='https://buy.stripe.com/3cI28t5NJfDE7CV6l80x204'">
+                        <img src="../../../img/elements/apay.svg" class="img-stripe">
+                        <img src="../../../img/elements/gpay.svg" class="img-stripe">
+                    </button>
+
+                    <button class="btn-buy paypal"
+                        onclick="window.location.href='https://www.paypal.com/ncp/payment/NEZDFQWU2LP3S'">
+                        <img src="../../../img/elements/paypal-icon.svg" class="img-paypal">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../../../hpscr/switch-lang.js"></script>
+    <script src="../../../hpscr/rbt_vb.js"></script>
+</body>
+
+</html>

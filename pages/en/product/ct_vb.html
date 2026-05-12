@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../styles/style5.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Crestblade Tee</title>
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <header class="header">
+
+            <div class="header-left">
+                <a href="#menu" class="icon">
+                    <svg class="icon-svg" viewBox="0 0 24 24">
+                        <path d="M3 6h18M3 12h18M3 18h18" />
+                    </svg>
+                </a>
+            </div>
+
+            <div id="menu" class="menu-overlay">
+                <a href="#!" class="menu-close">✕</a>
+
+                <nav class="menu">
+                    <a href="../index.html">Home</a>
+                    <a href="dc_gv_tee.html">DS Forge Collection</a>
+                    <a href="../info/about_us.html">About Us</a>
+                    <a href="../info/contacts.html" target="_blank">Contacts</a>
+
+                    <div class="lang-switch" id="lang-switch">
+                        <img src="../../../img/elements/de-flag.svg" class="lang-flag">
+                        <span class="span-switch">DE</span>
+                    </div>
+
+                </nav>
+            </div>
+
+            <div class="header-center">
+                <a href="../../../index.html" class="logo-link">
+                    <img src="../../../img/elements/logo.svg" alt="DS" class="logo-img">
+                </a>
+            </div>
+
+            <div class="header-right">
+                <button class="icon">
+                    <svg class="icon-svg" viewBox="0 0 24 24">
+                        <path d="M6 8h12l-1.5 12h-9z" />
+                        <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+                    </svg>
+                </button>
+                <div class="avatar"></div>
+            </div>
+        </header>
+    </div>
+
+    <main class="product-page">
+        <div class="product-container">
+
+            <div class="product-gallery">
+                <div class="image-wrapper">
+                    <button class="arrow left" onclick="prevImage()">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <img id="product-image" src="../../../img/ct-wb/ct-wb-1.jpg" alt="DC Core Tee">
+                    <button class="arrow right" onclick="nextImage()">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 6l6 6-6 6" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h1 class="product-title">Crestblade Tee – Washed Black</h1>
+
+                <div class="product-description">
+                    <p>
+                        The Crestblade Tee by DS STREETWEAR combines a dark, powerful aesthetic with a bold signature
+                        look.
+                        The front is dominated by a large sword design featuring the DS crest, enhanced by aggressive
+                        gothic lines and striking sleeve prints.
+                        The back remains cleaner and is elegantly finished with a small DS crest placed at the upper
+                        part.
+                    </p>
+                    <p>
+                        This shirt is made for people who want to wear strong outfits and aren’t satisfied with ordinary
+                        basics.
+                        The combination of dark streetwear, royal vibes, and an uncompromising front print makes this
+                        piece a true statement.
+                    </p>
+                    <ul class="features-list">
+                        <li>exclusive DS STREETWEAR design</li>
+                        <li>large front print with sword and crest motif</li>
+                        <li>prints on both sleeves for a stronger look</li>
+                        <li>clean back print with DS crest</li>
+                        <li>perfect for streetwear, everyday wear, and standout outfit</li>
+                    </ul>
+                </div>
+                   <div class="post-text">
+         			 <p>
+                       <span>You can choose the size and delivery address by clicking the “Buy” button below.</span>
+          			 </p>
+        		 </div>
+            </div>
+
+        </div>
+        <div class="product-btn_container">
+            <div class="purchase-actions buy-box">
+                <div class="buy-options">
+                    <button id="payment-request-button" class="btn-buy stripe"
+                        onclick="window.location.href='https://buy.stripe.com/8x27sN1xt6346yR9xk0x203'">
+                        <img src="../../../img/elements/apay.svg" class="img-stripe">
+                        <img src="../../../img/elements/gpay.svg" class="img-stripe">
+                    </button>
+
+                    <button class="btn-buy paypal"
+                        onclick="window.location.href='https://www.paypal.com/ncp/payment/3FFX4P4534C6E'">
+                        <img src="../../../img/elements/paypal-icon.svg" class="img-paypal">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../../../hpscr/switch-lang.js"></script>
+    <script src="../../../hpscr/ct-wb.js"></script>
+</body>
+</html>

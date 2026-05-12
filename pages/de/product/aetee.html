@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../styles/style5.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>ATHLETIK Essential Tee</title>
+</head>
+
+<body> 
+    <div class="header-wrapper">
+        <header class="header">
+            <div class="header-left">
+                <a href="#menu" class="icon">
+                    <svg class="icon-svg" viewBox="0 0 24 24">
+                        <path d="M3 6h18M3 12h18M3 18h18" />
+                    </svg>
+                </a>
+
+                <div id="menu" class="menu-overlay">
+
+                    <a href="#!" class="menu-close">✕</a>
+
+                    <nav class="menu">
+                        <a href="../../../index.html">Startseite</a>
+                        <a href="dc_gv_tee.html">DS Forge Kollektion</a>
+                        <a href="../info/about_us.html">Über uns</a>
+                        <a href="../info/contacts.html">Kontakt</a>
+                        <div class="lang-switch" id="lang-switch">
+                            <img src="/img/elements/uk-flag.svg" class="lang-flag">
+                            <span>UK</span>
+                        </div>
+                    </nav>
+                </div>
+
+                <!--svg icon circle-->
+            </div>
+
+            <div class="header-center">
+                <a href="../../../index.html" class="logo-link">
+                    <img src="../../../img/elements/logo.svg" alt="DS" class="logo-img">
+                </a>
+            </div>
+
+            <div class="header-right">
+                <button class="icon">
+                    <svg class="icon-svg" viewBox="0 0 24 24">
+                        <path d="M6 8h12l-1.5 12h-9z" />
+                        <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+                    </svg>
+                </button>
+                <div class="avatar"></div>
+            </div>
+        </header>
+    </div>
+
+    <main class="product-page">
+        <div class="product-container">
+
+            <div class="product-gallery">
+                <div class="image-wrapper">
+                    <button class="arrow left" onclick="prevImage()">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button> 
+                    <img id="product-image" src="../../../img/aetee/aet-fw-2.webp?v=1" alt="ATHLETIK Essential Tee">
+                    <button class="arrow right" onclick="nextImage()">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 6l6 6-6 6" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h1 class="product-title">ATHLETIK Essential Tee</h1>
+
+                <div class="product-description">
+                    <p>
+                        Zeitlos. Klar. Selbstbewusst.</p>
+                    <p>
+                        Das ATHLETIK Essential Tee steht für minimalistischen Stil mit Charakter. Der dezente Frontprint
+                        kombiniert klassische Typografie mit einer markanten Signatur – ein Statement ohne laut zu sein.
+
+                    </p>
+                    <p>
+                        Gefertigt aus hochwertiger Baumwolle bietet das Shirt einen angenehmen Tragekomfort und eine
+                        saubere Passform für jeden Tag.
+                    </p>
+                    <p>Ob Streetwear oder cleanes Outfit – dieses Piece passt immer.</p>
+
+                    <p class="li-title"><span>Details:</span></p>
+                    <ul class="features-list aet-li">
+                        <li>Farbe: Weiß</li>
+                        <li>Frontprint „ATHLETIK – EST 2025 – GERMANY“</li>
+                        <li>Weicher, atmungsaktiver Stoff</li>
+                        <li>Regular Fit</li>
+                        <li>Unisex</li>
+                    </ul>
+                    <p class="new-row">Style-Tipp:
+                        Kombiniere es mit schwarzen Pants und cleanen Sneakern für einen modernen Look.
+                    </p>
+                </div>
+                   <div class="post-text">
+                    <p>
+                       <span>Sie können die Größe und die Lieferadresse auswählen, indem Sie unten auf die Schaltfläche
+                            „Kaufen“ klicken.</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="product-btn_container">
+            <div class="purchase-actions buy-box">
+                <div class="buy-options">
+
+                    <button id="payment-request-button" class="btn-buy stripe"
+                        onclick="window.location.href='https://buy.stripe.com/eVq9AV3FBgHI2iBgZM0x206'">
+                        <img src="../../../img/elements/apay.svg" class="img-stripe">
+                        <img src="../../../img/elements/gpay.svg" class="img-stripe">
+                    </button>
+
+                    <button class="btn-buy paypal" onclick="window.location.href='https://www.paypal.com/ncp/payment/TFZBXV462VETU'">
+                        <img src="../../../img/elements/paypal-icon.svg" class="img-paypal">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../../../hpscr/switch-lang.js"></script>
+    <script src="../../../hpscr/aetee.js"></script>
+    <!--<script src="/hpscr/stat.js"></script> -->
+</body>
+
+</html>
