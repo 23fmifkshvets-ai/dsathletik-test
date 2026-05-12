@@ -1,0 +1,20 @@
+<svg class="flag-uk" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="48" height="32">
+  <!-- blue background -->
+  <rect width="60" height="40" fill="#012169"></rect>
+
+  <!-- white diagonals -->
+  <polygon points="0,0 7,0 60,33 60,40 53,40 0,7" fill="#FFFFFF"></polygon>
+  <polygon points="60,0 53,0 0,33 0,40 7,40 60,7" fill="#FFFFFF"></polygon>
+
+  <!-- red diagonals -->
+  <polygon points="0,0 4,0 60,36 60,40 56,40 0,4" fill="#C8102E"></polygon>
+  <polygon points="60,0 56,0 0,36 0,40 4,40 60,4" fill="#C8102E"></polygon>
+
+  <!-- white cross -->
+  <rect x="25" y="0" width="10" height="40" fill="#FFFFFF"></rect>
+  <rect x="0" y="15" width="60" height="10" fill="#FFFFFF"></rect>
+
+  <!-- red cross -->
+  <rect x="27" y="0" width="6" height="40" fill="#C8102E"></rect>
+  <rect x="0" y="17" width="60" height="6" fill="#C8102E"></rect>
+</svg>
