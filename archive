@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DS ATHLETIK DROP IN</title>
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #f5f5f5;
+      --muted: rgba(245, 245, 245, 0.58);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    main {
+      width: 100%;
+      max-width: 900px;
+      text-align: center;
+    }
+
+    h1,
+    h2,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 8.6vw, 6.2rem);
+      line-height: 0.94;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin-top: 16px;
+      font-size: clamp(1.6rem, 4.6vw, 3rem);
+      line-height: 0.98;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      width: min(640px, 100%);
+      margin: 36px auto 0;
+    }
+
+    .value {
+      display: block;
+      font-family: "Arial Black", "Helvetica Neue", sans-serif;
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
+      line-height: 1;
+      letter-spacing: 0.04em;
+    }
+
+    .label {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      font-family: Arial, sans-serif;
+    }
+
+    .status {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-family: Arial, sans-serif;
+    }
+
+    @media (max-width: 600px) {
+      .countdown {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>DS ATHLETIK</h1>
+    <h2>DROP IN</h2>
+
+    <div class="countdown">
+      <div>
+        <span class="value" id="days">00</span>
+        <span class="label">Days</span>
+      </div>
+      <div>
+        <span class="value" id="hours">00</span>
+        <span class="label">Hours</span>
+      </div>
+      <div>
+        <span class="value" id="minutes">00</span>
+        <span class="label">Minutes</span>
+      </div>
+      <div>
+        <span class="value" id="seconds">00</span>
+        <span class="label">Seconds</span>
+      </div>
+    </div>
+
+    <p class="status" id="status">Berlin time. Next drop at 13:00.</p>
+  </main>
+
+  <script>
+    const formatter = new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Europe/Berlin",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false
+    });
+
+    function getBerlinParts(date) {
+      const parts = formatter.formatToParts(date);
+      const map = {};
+
+      for (const part of parts) {
+        if (part.type !== "literal") {
+          map[part.type] = part.value;
+        }
+      }
+
+      return {
+        year: Number(map.year),
+        month: Number(map.month),
+        day: Number(map.day),
+        hour: Number(map.hour),
+        minute: Number(map.minute),
+        second: Number(map.second)
+      };
+    }
+
+    function getNextDrop() {
+      const now = new Date();
+      const berlin = getBerlinParts(now);
+      let target = new Date(Date.UTC(berlin.year, berlin.month - 1, berlin.day, 11, 0, 0));
+      const berlinSecondsNow = berlin.hour * 3600 + berlin.minute * 60 + berlin.second;
+
+      if (berlinSecondsNow >= 13 * 3600) {
+        target = new Date(target.getTime() + 86400000);
+      }
+
+      return target;
+    }
+
+    const fields = {
+      days: document.getElementById("days"),
+      hours: document.getElementById("hours"),
+      minutes: document.getElementById("minutes"),
+      seconds: document.getElementById("seconds"),
+      status: document.getElementById("status")
+    };
+
+    function pad(value) {
+      return String(value).padStart(2, "0");
+    }
+
+    function renderCountdown() {
+      const now = new Date();
+      const target = getNextDrop();
+      const berlin = getBerlinParts(now);
+      let diff = Math.max(0, target.getTime() - now.getTime());
+
+      const days = Math.floor(diff / 86400000);
+      diff -= days * 86400000;
+      const hours = Math.floor(diff / 3600000);
+      diff -= hours * 3600000;
+      const minutes = Math.floor(diff / 60000);
+      diff -= minutes * 60000;
+      const seconds = Math.floor(diff / 1000);
+
+      fields.days.textContent = pad(days);
+      fields.hours.textContent = pad(hours);
+      fields.minutes.textContent = pad(minutes);
+      fields.seconds.textContent = pad(seconds);
+      fields.status.textContent = `Berlin ${pad(berlin.hour)}:${pad(berlin.minute)}:${pad(berlin.second)}. Next drop at 13:00.`;
+    }
+
+    renderCountdown();
+    setInterval(renderCountdown, 1000);
+  </script>
+</body>
+</html>
