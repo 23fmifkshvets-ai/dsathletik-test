@@ -1,68 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
-   
+
     const latestProduct = document.querySelector('.products .product-card');
 
     if (!latestProduct) return;
 
-   
     const img = latestProduct.querySelector('img')?.src;
     const name = latestProduct.querySelector('h3')?.textContent;
     const link = latestProduct.querySelector('a')?.href;
 
-
     const story = document.getElementById('story1');
     const btn = document.getElementById('story-btn');
+    const shirt = document.querySelector('.story1-shirt');
 
-    if (!story || !link) return;
+    if (!story || !link || !shirt) return;
 
-    
-   /* if (img) {
-         story.style.backgroundImage = `url(${img})`;
-        story.style.backgroundSize = 'cover';
-        story.style.backgroundPosition = 'center';
-    } */
+    // картинка
+    if (img) {
+        shirt.src = img;
+    }
 
-    
+    // назва
     const label = story.querySelector('.story-label');
+
     if (label && name) {
         label.textContent = `New: ${name}`;
     }
 
-    const hrf = latestProduct.querySelector('a')?.href;
-
-    const btn_clk = document.getElementById('story-btn');
-
-    if (!btn_clk || !hrf) return;
-
+    // кнопка
     btn.addEventListener('click', () => {
-        window.location.href = hrf;
+        window.location.href = link;
     });
 
-   
+    // random
     function random(min, max) {
         return Math.random() * (max - min) + min;
     }
 
- 
-    const scale = random(1.2, 1.6);      
-    const rotate = random(-15, 15);      
-    const posX = random(30, 70);        
-    const posY = random(20, 60);         
-    
-    story.style.setProperty('--bg-url', `url(${img})`);
+    const scale = random(1.2, 1.6);
+    const rotate = random(-15, 15);
 
-    const before = window.getComputedStyle(story, '::before');
-
-    
-    const styleSheet = document.styleSheets[0];
-    styleSheet.insertRule(`
-  #story1::before {
-    background-image: url(${img});
-    transform: scale(${scale}) rotate(${rotate}deg);
-    background-position: ${posX}% ${posY}%;
-    
-  }
-`, styleSheet.cssRules.length);
+    story.style.setProperty('--scale', scale);
+    story.style.setProperty('--rotate', `${rotate}deg`);
 
 });
 
