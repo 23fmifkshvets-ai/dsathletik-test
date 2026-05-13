@@ -388,17 +388,28 @@
     });
   </script>
   <script>
-  const track = document.querySelector('.announcement-track');
-  const bar = document.querySelector('.announcement-bar');
-
-  track.addEventListener('animationiteration', () => {
-  bar.classList.toggle('invert');
   });
   /* const bar = document.querySelector('.announcement-bar');
   setInterval(() => {
   bar.classList.toggle('invert');
   }, 18000); */
   </script>
+  <script>
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  const track = document.querySelector('.announcement-track');
+  const bar = document.querySelector('.announcement-bar');
+
+  track.addEventListener('animationiteration', () => {
+    bar.classList.toggle('invert');
+
+    console.log('iteration');
+  });
+
+});
+
+</script>
 </body>
 
 </html>
