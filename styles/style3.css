@@ -260,7 +260,7 @@ a.logo-link:hover .logo-img {
 
   position: sticky;
   top: var(--header-height);
-
+  transition: background 0.25s ease;
   z-index: 999;
 }
 
@@ -279,6 +279,16 @@ a.logo-link:hover .logo-img {
 
   padding: 10px 12px;
   flex-shrink: 0;
+  transition: color 0.25s ease;
+}
+
+.announcement-bar.invert {
+  background: #fff;
+}
+
+.announcement-bar.invert 
+.announcement-track span {
+  color: #000;
 }
 
 @keyframes marquee {
