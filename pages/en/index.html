@@ -395,20 +395,15 @@
   }, 18000); */
   </script>
   <script>
-
 window.addEventListener('DOMContentLoaded', () => {
 
-  const track = document.querySelector('.announcement-track');
   const bar = document.querySelector('.announcement-bar');
 
-  track.addEventListener('animationiteration', () => {
+  setInterval(() => {
     bar.classList.toggle('invert');
-
-    console.log('iteration');
-  });
+  }, 9000);
 
 });
-
 </script>
 </body>
 
