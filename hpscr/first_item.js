@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return Math.random() * (max - min) + min;
     }
 
-    const scale = random(1.2, 1.6);
-    const rotate = random(-15, 15);
+    const scale = random(1.5, 2);
+    const rotate = random(-20, 20);
 
     story.style.setProperty('--scale', scale);
     story.style.setProperty('--rotate', `${rotate}deg`);
