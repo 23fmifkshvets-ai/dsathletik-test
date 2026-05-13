@@ -606,7 +606,7 @@ a.logo-link:hover .logo-img {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 2;
 }
 
