@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     if (img) {
-        story.style.backgroundImage = `url(${img})`;
+      //  story.style.backgroundImage = `url(${img})`;
         story.style.backgroundSize = 'cover';
         story.style.backgroundPosition = 'center';
     }
