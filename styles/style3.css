@@ -592,9 +592,9 @@ a.logo-link:hover .logo-img {
   position: absolute;
   inset: 0;
 
-  background-image: var(--bg-url);
+  /*background-image: var(--bg-url);
   background-size: cover;
-  background-position: var(--bg-x, 50%) var(--bg-y, 50%);
+  background-position: var(--bg-x, 50%) var(--bg-y, 50%);*/
 
   transform: scale(var(--scale, 1.2)) rotate(var(--rotate, 15deg));
   
@@ -610,6 +610,27 @@ a.logo-link:hover .logo-img {
   z-index: 2;
 }
 
+.story1-shirt {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 90vw;
+  max-width: 1200px;
+  max-height: 90vh;
+
+  object-fit: contain;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(var(--rotate, 0deg))
+    scale(var(--scale, 1));
+
+  z-index: 1;
+
+  pointer-events: none;
+}
 .story-2 {
   background-image: url("../img/elements/st2.1.jpg");
   --bg-x: 10%;
