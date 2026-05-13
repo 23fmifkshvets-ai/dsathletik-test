@@ -543,14 +543,13 @@ a.logo-link:hover .logo-img {
   overflow: hidden;
   position: sticky;
   isolation: isolate;
-  transform: translateZ(0);
   --overlay: 0;
 
   scroll-snap-align: start;
   scroll-margin-top: 0px;
 
   -webkit-transform: translate3d(0,0,0); 
-  transform: translateZ(0);
+ /* transform: translateZ(0); */
 }
 
 .story::before {
@@ -607,7 +606,7 @@ a.logo-link:hover .logo-img {
   content: "";
   position: absolute;
   inset: 0;
-  /* background: rgba(0, 0, 0, 0.45);  */
+  background: rgba(0, 0, 0, 0.15);
   z-index: 2;
 }
 
