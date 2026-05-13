@@ -16,11 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!story || !link) return;
 
     
-    if (img) {
-      //  story.style.backgroundImage = `url(${img})`;
+   /* if (img) {
+         story.style.backgroundImage = `url(${img})`;
         story.style.backgroundSize = 'cover';
         story.style.backgroundPosition = 'center';
-    }
+    } */
 
     
     const label = story.querySelector('.story-label');
