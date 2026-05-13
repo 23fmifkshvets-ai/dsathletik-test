@@ -388,18 +388,13 @@
     });
   </script>
   <script>
-    <script>
-
-const track = document.querySelector('.announcement-track');
-const bar = document.querySelector('.announcement-bar');
-
-track.addEventListener('animationiteration', () => {
-  bar.classList.toggle('invert');
-});
-
-</script>
-    /*
+  const track = document.querySelector('.announcement-track');
   const bar = document.querySelector('.announcement-bar');
+
+  track.addEventListener('animationiteration', () => {
+  bar.classList.toggle('invert');
+  });
+  /* const bar = document.querySelector('.announcement-bar');
   setInterval(() => {
   bar.classList.toggle('invert');
   }, 18000); */
