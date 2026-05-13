@@ -616,9 +616,9 @@ a.logo-link:hover .logo-img {
   left: 50%;
   top: 50%;
 
-  width: 90vw;
-  max-width: 1200px;
-  max-height: 90vh;
+  width: 130vw;
+  max-width: 1800px;
+  max-height: 120vh;
 
   object-fit: contain;
 
