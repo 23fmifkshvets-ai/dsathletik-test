@@ -535,7 +535,7 @@ a.logo-link:hover .logo-img {
 
   display: flex;
   align-items: center;
-  background: #000;
+  background: #fff;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: var(--bg-x, 50%) var(--bg-y, 50%);
