@@ -586,22 +586,22 @@ a.logo-link:hover .logo-img {
   z-index: 1;
 
 }
-
+/*
 #story1::before {
   content: "";
   position: absolute;
   inset: 0;
 
-  /*background-image: var(--bg-url);
+  background-image: var(--bg-url);
   background-size: cover;
-  background-position: var(--bg-x, 50%) var(--bg-y, 50%);*/
+  background-position: var(--bg-x, 50%) var(--bg-y, 50%);
 
   transform: scale(var(--scale, 1.2)) rotate(var(--rotate, 15deg));
   
   z-index: 1;
   transition: transform 0.6s ease;
 }
-
+ */
 #story1::after {
   content: "";
   position: absolute;
