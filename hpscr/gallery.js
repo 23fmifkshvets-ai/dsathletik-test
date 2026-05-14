@@ -43,3 +43,16 @@ document.querySelectorAll('.size-btn').forEach(button => {
         button.classList.add('active');
     });
 });
+
+
+const track = document.querySelector('.announcement-track');
+
+if (track) {
+
+  const content = track.innerHTML;
+
+  for (let i = 0; i < 10; i++) {
+    track.innerHTML += content;
+  }
+
+}
