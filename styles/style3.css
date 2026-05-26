@@ -687,11 +687,7 @@ a.logo-link:hover .logo-img {
 .story-3.darkened::before {
   background: rgba(0,0,0,.92);
 }
-@keyframes darkenStory {
-  to {
-    background: rgba(0,0,0,.92);
-  }
-}
+
 .is-buggy-browser, 
 .is-buggy-browser html {
   scroll-snap-type: none !important;
