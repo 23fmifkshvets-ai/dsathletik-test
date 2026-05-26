@@ -1,3 +1,4 @@
+
 *,
 *::before,
 *::after {
@@ -267,7 +268,6 @@ a.logo-link:hover .logo-img {
 .announcement-track {
   display: flex;
   width: max-content;
-
   animation: marquee 28s linear infinite;
 }
 
@@ -677,14 +677,21 @@ a.logo-link:hover .logo-img {
   right: 0;
   bottom: -3px; 
   
-  background: 
-    linear-gradient(to bottom, transparent 60%, black),
-    rgba(0, 0, 0, 0.45);
+  background: rgba(0,0,0,.25);
+
+  transition: background 1s ease;
   
   z-index: 1;
   pointer-events: none;
 }
-
+.story-3.darkened::before {
+  background: rgba(0,0,0,.92);
+}
+@keyframes darkenStory {
+  to {
+    background: rgba(0,0,0,.92);
+  }
+}
 .is-buggy-browser, 
 .is-buggy-browser html {
   scroll-snap-type: none !important;
@@ -761,6 +768,41 @@ a.logo-link:hover .logo-img {
 
 .story-btn:hover .arrow-ios {
   transform: translateX(3px);
+}
+
+.products-reveal {
+  position: relative;
+  z-index: 20;
+
+  background: rgb(255, 255, 255);
+
+ /*  margin-top: -20vh; */
+
+  border-radius: 30px 30px 0 0;
+
+  min-height: 100vh;
+
+  /*padding-top: 25vh;*/
+
+  transform: translateY(120px);
+
+  opacity: 0;
+
+  transition:
+    transform 1s cubic-bezier(.22,.61,.36,1),
+    opacity 1s ease;
+}
+
+.products-reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@keyframes revealProducts {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 
