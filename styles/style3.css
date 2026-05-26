@@ -269,7 +269,7 @@ a.logo-link:hover .logo-img {
 .announcement-track {
   display: flex;
   width: max-content;
-  animation: marquee 100s linear infinite;
+  animation: marquee 38s linear infinite;
 }
 
 .announcement-track span {
@@ -401,7 +401,8 @@ a.logo-link:hover .logo-img {
 
 
 
-.products {
+.products,
+.products-reveal {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
