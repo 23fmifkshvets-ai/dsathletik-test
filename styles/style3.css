@@ -268,7 +268,7 @@ a.logo-link:hover .logo-img {
 .announcement-track {
   display: flex;
   width: max-content;
-  animation: marquee 200s linear infinite;
+  animation: marquee 100s linear infinite;
 }
 
 .announcement-track span {
