@@ -45,3 +45,52 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 console.log("JS START");
+
+
+
+  document.fonts.ready.then(() => {
+      document.body.classList.add('fonts-loaded');
+    });
+
+    setTimeout(() => {
+      document.body.classList.add('fonts-loaded');
+    }, 2000);
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const ua = navigator.userAgent.toLowerCase();
+
+      if (ua.includes('samsungbrowser')) {
+        document.body.classList.add('is-samsung-browser');
+      }
+
+      const buggyAgents = ['miuibrowser', 'samsungbrowser', 'ucbrowser', 'fbav', 'instagram'];
+      if (buggyAgents.some(agent => ua.includes(agent))) {
+        document.body.classList.add('is-buggy-browser');
+      }
+    });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const products = document.querySelector('.products-reveal');
+    const story3 = document.querySelector('.story-3');
+  
+    if (!products || !story3) return;
+  
+    const observer = new IntersectionObserver((entries) => {
+  
+      entries.forEach(entry => {
+  
+        if (entry.isIntersecting) {
+          products.classList.add('active');
+          story3.classList.add('darkened');
+        }
+  
+      });
+  
+    }, {
+      threshold: 0.15
+    });
+  
+    observer.observe(products);
+  
+  });
