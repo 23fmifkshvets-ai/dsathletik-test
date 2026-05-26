@@ -1,6 +1,4 @@
-# Очищений та переписаний JavaScript
 
-```javascript
 // ===== START =====
 
 console.log("JS START");
@@ -121,4 +119,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
-```
+
