@@ -687,7 +687,7 @@ a.logo-link:hover .logo-img {
   pointer-events: none;
 }
 .story-3.darkened::before {
-  background: rgba(0,0,0,.92);
+  background: rgba(0,0,0,.52);
 }
 
 .is-buggy-browser, 
