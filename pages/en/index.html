@@ -445,46 +445,7 @@
   <script src="../../hpscr/first_item.js"></script>
   <script src="../../hpscr/index-switch-lang.js"></script>
   <script src="../../hpscr/gallery.js"></script>
-  <script>
-    document.fonts.ready.then(() => {
-      document.body.classList.add('fonts-loaded');
-    });
 
-    setTimeout(() => {
-      document.body.classList.add('fonts-loaded');
-    }, 2000);
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const ua = navigator.userAgent.toLowerCase();
-
-      if (ua.includes('samsungbrowser')) {
-        document.body.classList.add('is-samsung-browser');
-      }
-
-      const buggyAgents = ['miuibrowser', 'samsungbrowser', 'ucbrowser', 'fbav', 'instagram'];
-      if (buggyAgents.some(agent => ua.includes(agent))) {
-        document.body.classList.add('is-buggy-browser');
-      }
-    });
-  </script>
-  <script>
-  });
-  /* const bar = document.querySelector('.announcement-bar');
-  setInterval(() => {
-  bar.classList.toggle('invert');
-  }, 18000); */
-  </script>
-  <script>
-window.addEventListener('DOMContentLoaded', () => {
-
-  const bar = document.querySelector('.announcement-bar');
-
-  setInterval(() => {
-    bar.classList.toggle('invert');
-  }, 12000);
-
-});
-</script>
 </body>
 
 </html>
