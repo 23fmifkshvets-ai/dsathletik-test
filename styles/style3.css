@@ -557,8 +557,8 @@ a.logo-link:hover .logo-img {
   isolation: isolate;
   --overlay: 0;
 
-  scroll-snap-align: start;
-  scroll-margin-top: 0px;
+ /* scroll-snap-align: start;
+  scroll-margin-top: 0px; */
 
   -webkit-transform: translate3d(0,0,0); 
  /* transform: translateZ(0); */
