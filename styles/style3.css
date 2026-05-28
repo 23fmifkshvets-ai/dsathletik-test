@@ -405,7 +405,7 @@ a.logo-link:hover .logo-img {
 .products-reveal {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 8px;
+  gap: 15px 8px;
   padding: 5px;
 }
 
@@ -1040,7 +1040,7 @@ a.logo-link:hover .logo-img {
 
   .products, .products-reveal {
     grid-template-columns:repeat(2, 1fr);
-    gap: 4px;
+    gap: 10px 6px;
   }
 
   .product-card h3 {
