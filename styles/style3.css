@@ -497,14 +497,18 @@ a.logo-link:hover .logo-img {
   height: 100%;
 
   display: flex;
+
   overflow-x: auto;
   overflow-y: hidden;
 
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
 
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+
   scroll-behavior: smooth;
+  touch-action: pan-x;
+  overscroll-behavior: contain;
 }
 
 .product-gallery::-webkit-scrollbar {
