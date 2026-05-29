@@ -1110,7 +1110,7 @@ a.logo-link:hover .logo-img {
 }
 @media (max-width: 320px) {
   .header-est{
-    margin-left:1px;
+    display:none;
   }
 }
 
