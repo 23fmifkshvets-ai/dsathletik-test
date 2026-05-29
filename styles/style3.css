@@ -121,20 +121,23 @@ a, button {
 }
 
 .promo-banner {
-  width: min(92%, 480px);
-
-  background: #000;
+  width: min(94%, 720px);
+  max-height: 92vh;
 
   position: relative;
 
   overflow: hidden;
+
+  background: #000;
 }
 
 .promo-banner img {
   width: 100%;
-  height: 620px;
+  height: auto;
 
-  object-fit: cover;
+  max-height: 92vh;
+
+  object-fit: contain;
 
   display: block;
 }
