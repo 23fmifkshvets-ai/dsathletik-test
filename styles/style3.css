@@ -150,11 +150,11 @@ a, button {
 .header-est {
   color: #fff;
   font-size: 14px;
-  font-weight: 700;
+  /* font-weight: 700; */
   margin-left: 20px;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Oswald", sans-serif;
 
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   white-space: nowrap;
 
