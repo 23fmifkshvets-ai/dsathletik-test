@@ -5,7 +5,7 @@ document.querySelectorAll('.gallery-card').forEach(product => {
 
 
 
-  // DOTS ACTIVE
+  // DOTS
   gallery.addEventListener('scroll', () => {
 
     const index = Math.round(
@@ -24,13 +24,13 @@ document.querySelectorAll('.gallery-card').forEach(product => {
 
 
 
-  // DESKTOP WHEEL SCROLL
+  // DESKTOP SCROLL
   gallery.addEventListener('wheel', (e) => {
 
     e.preventDefault();
 
     gallery.scrollLeft += e.deltaY;
 
-  });
+  }, { passive: false });
 
 });
