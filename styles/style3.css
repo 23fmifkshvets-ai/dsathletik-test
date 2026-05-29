@@ -147,6 +147,23 @@ a, button {
   justify-content: flex-end;
 }
 
+.header-est {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  opacity: 0.95;
+  transition: opacity 0.25s ease;
+}
+
+.header-est:hover {
+  opacity: 0.6;
+}
 
 .menu-overlay {
   position: fixed;
