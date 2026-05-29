@@ -151,6 +151,7 @@ a, button {
   color: #fff;
   font-size: 14px;
   font-weight: 700;
+  margin-left: 20px;
   font-family: "Bebas Neue", sans-serif;
 
   letter-spacing: 2px;
@@ -1019,7 +1020,10 @@ a.logo-link:hover .logo-img {
     padding: 0 12px;
     gap: 14px;
   }
-
+  .header-est{
+    font-size:12px;
+    margin-left: 5px;
+  }
   .logo-img {
     height: 38px;
   }
