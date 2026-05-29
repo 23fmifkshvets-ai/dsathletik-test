@@ -1,0 +1,20 @@
+document.querySelectorAll('.product-image').forEach(product => {
+
+  const gallery = product.querySelector('.product-gallery');
+  const dots = product.querySelectorAll('.dot');
+
+  gallery.addEventListener('scroll', () => {
+
+    const index = Math.round(
+      gallery.scrollLeft / gallery.offsetWidth
+    );
+
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    if(dots[index]) {
+      dots[index].classList.add('active');
+    }
+
+  });
+
+});
