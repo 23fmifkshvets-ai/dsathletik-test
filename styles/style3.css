@@ -1178,6 +1178,23 @@ a.logo-link:hover .logo-img {
 
 @media (max-width: 767px) {
 
+
+    .promo-banner {
+    width: 94%;
+    max-height: 88vh;
+  }
+
+  .promo-banner img {
+    max-height: 88vh;
+  }
+
+  .promo-content {
+    padding: 22px;
+  }
+
+  .promo-content h2 {
+    font-size: 24px;
+  }
   :root {
     --header-height: 60px;
   }
