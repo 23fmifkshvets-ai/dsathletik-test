@@ -525,6 +525,36 @@ a.logo-link:hover .logo-img {
   display: block;
   margin-bottom: 0;
 }
+
+.gallery-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 6px;
+
+  z-index: 5;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.45);
+
+  transition: 0.25s;
+}
+
+.dot.active {
+  background: #fff;
+
+  transform: scale(1.15);
+}
 /*-------!--------*/
 .cart-icon {
   font-size: 24px;
