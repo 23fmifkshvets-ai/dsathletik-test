@@ -1120,10 +1120,10 @@ a.logo-link:hover .logo-img {
     letter-spacing: 1px;
   }
 
-  .products, .products-reveal {
+ /* .products, .products-reveal {
     grid-template-columns:repeat(2, 1fr);
     gap: 10px 6px;
-  }
+  } */
 
   .product-card h3 {
     font-size: 12px;
