@@ -1107,5 +1107,17 @@ a.logo-link:hover .logo-img {
     font-size: 13px;
   }
 }
+@media (max-width: 425px) {
+  .header-est{
+    margin-left:5px;
+  }
+}
+@media (max-width: 320px) {
+  .header-est{
+    margin-left:1px;
+  }
+}
+
+  
 
 
