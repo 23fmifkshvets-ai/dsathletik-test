@@ -504,13 +504,13 @@ a.logo-link:hover .logo-img {
   scroll-snap-type: x mandatory;
 
   -webkit-overflow-scrolling: touch;
+
   scrollbar-width: none;
 
   scroll-behavior: smooth;
-  touch-action: pan-x;
+
   overscroll-behavior: contain;
 }
-
 .product-gallery::-webkit-scrollbar {
   display: none;
 }
