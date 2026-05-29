@@ -1115,6 +1115,30 @@ a.logo-link:hover .logo-img {
 
 @media (orientation: landscape) and (max-height: 500px) {
 
+    .promo-banner {
+    width: auto;
+    height: 82vh;
+
+    max-height: 82vh;
+  }
+
+  .promo-banner img {
+    height: 82vh;
+    width: auto;
+
+    max-width: 100%;
+
+    object-fit: contain;
+  }
+
+  .promo-content {
+    padding: 18px;
+  }
+
+  .promo-content h2 {
+    font-size: 20px;
+  }
+
   .header-wrapper,
   .header {
     border-bottom: 1px solid transparent;
