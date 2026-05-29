@@ -5,7 +5,7 @@ document.querySelectorAll('.gallery-card').forEach(product => {
 
 
 
-  // DOTS
+  // ACTIVE DOT
   gallery.addEventListener('scroll', () => {
 
     const index = Math.round(
@@ -24,32 +24,18 @@ document.querySelectorAll('.gallery-card').forEach(product => {
 
 
 
-  // SMART DESKTOP SCROLL
-  gallery.addEventListener('wheel', (e) => {
+  // CLICK DOTS
+  dots.forEach((dot, index) => {
 
-    const maxScroll =
-      gallery.scrollWidth - gallery.clientWidth;
+    dot.addEventListener('click', () => {
 
-    const isScrollingRight = e.deltaY > 0;
-    const isScrollingLeft = e.deltaY < 0;
+      gallery.scrollTo({
+        left: gallery.offsetWidth * index,
+        behavior: 'smooth'
+      });
 
-    const atStart = gallery.scrollLeft <= 0;
-    const atEnd = gallery.scrollLeft >= maxScroll - 1;
+    });
 
-
-
-    // якщо можна гортати галерею
-    if (
-      (isScrollingRight && !atEnd) ||
-      (isScrollingLeft && !atStart)
-    ) {
-
-      e.preventDefault();
-
-      gallery.scrollLeft += e.deltaY;
-
-    }
-
-  }, { passive: false });
+  });
 
 });
