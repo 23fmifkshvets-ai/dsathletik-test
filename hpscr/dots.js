@@ -1,4 +1,4 @@
-document.querySelectorAll('.product-image').forEach(product => {
+document.querySelectorAll('.gallery-card').forEach(product => {
 
   const gallery = product.querySelector('.product-gallery');
   const dots = product.querySelectorAll('.dot');
