@@ -24,12 +24,31 @@ document.querySelectorAll('.gallery-card').forEach(product => {
 
 
 
-  // DESKTOP SCROLL
+  // SMART DESKTOP SCROLL
   gallery.addEventListener('wheel', (e) => {
 
-    e.preventDefault();
+    const maxScroll =
+      gallery.scrollWidth - gallery.clientWidth;
 
-    gallery.scrollLeft += e.deltaY;
+    const isScrollingRight = e.deltaY > 0;
+    const isScrollingLeft = e.deltaY < 0;
+
+    const atStart = gallery.scrollLeft <= 0;
+    const atEnd = gallery.scrollLeft >= maxScroll - 1;
+
+
+
+    // якщо можна гортати галерею
+    if (
+      (isScrollingRight && !atEnd) ||
+      (isScrollingLeft && !atStart)
+    ) {
+
+      e.preventDefault();
+
+      gallery.scrollLeft += e.deltaY;
+
+    }
 
   }, { passive: false });
 
