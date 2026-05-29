@@ -504,6 +504,7 @@ a.logo-link:hover .logo-img {
   -webkit-overflow-scrolling: touch;
 
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .product-gallery::-webkit-scrollbar {
