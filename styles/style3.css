@@ -982,6 +982,11 @@ a.logo-link:hover .logo-img {
         background-color: #ffffff !important;
     }
 }
+@media (hover:hover) {
+  .gallery-dots {
+    display: none;
+  }
+}
 
 @media (max-width: 1024px) {
   .header {
