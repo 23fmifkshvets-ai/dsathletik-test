@@ -947,7 +947,9 @@ a.logo-link:hover .logo-img {
     border-bottom: 1px solid transparent;
     background-color: transparent;
   }
-
+  .header-est{
+    display:none;
+  }
   .icon {
     color: black;
   }
